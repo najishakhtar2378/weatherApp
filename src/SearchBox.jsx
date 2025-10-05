@@ -50,6 +50,9 @@ export default function SearchBox({updateInfo}) {
     }
   }
   return (
+    <div className="container">
+      <div className="row">
+        <div className="col-6">
     <div className="SearchBox">
       <form onSubmit={handleSubmit}>
         <TextField id="city" label="City-name" variant="outlined" required value={city} onChange={handleOnChange}/>
@@ -58,5 +61,8 @@ export default function SearchBox({updateInfo}) {
          {error && <p style={{color:"red"}}> No such place Exist! </p>}
       </form>
     </div>
+   </div>
+  </div>
+ </div>
   );
 }
