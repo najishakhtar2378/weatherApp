@@ -21,10 +21,18 @@ export default function SearchBox({updateInfo}) {
        weather: jsonResponse.weather[0].description,
      };
      console.log(result)
-    return result;
-    }catch(err){
-      throw err;
+      setError(false);
+     return result;
+     }
+    catch(err){
+    console.log(err);
+   setError(true);
+   throw err;
     }
+    // return result;
+    // }catch(err){
+    //   throw err;
+    // }
   
    };
   let handleOnChange=(event)=>{
